@@ -5,7 +5,7 @@
   --second_color: rgb(217, 204, 181);
   --bg-color: #171717;
   --white_color: rgb(255, 255, 255);
-  --main-padding: 100px;
+  --main-padding: 200px;
 }
 
 /* Main Components */
@@ -27,6 +27,20 @@ ul {
 }
 a {
   text-decoration: none;
+}
+
+.text_side h1 {
+  font-size: 60px;
+  line-height: 66px;
+  font-weight: 700;
+  color: var(--white_color);
+  margin-bottom: 20px;
+}
+.text_side span {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--main_color);
 }
 /* =========================== Start Home Section =========================== */
 section.home {
@@ -245,79 +259,103 @@ section.home > .container .text_side .btns a.about_btn {
 /* ================= Start About Section ================= */
 section.about .container {
   background-image: url(../images/map-1.png);
-  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
   padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
   display: flex;
 }
-section.about .container .text-section
-{
+section.about .container .text-section {
   display: flex;
 }
-section.about .container .text-section .about_text
-{
+section.about .container .text-section .about_text {
   flex: 0 0 50%;
 }
-section.about .container .text-section .about_text span {
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 700;
-  color: var(--main_color);
-}
-section.about .container .text-section .about_text h1 
-{
-  font-size: 60px;
-  line-height: 66px;
-  font-weight: 700;
-  color: var(--white_color);
-  margin-bottom: 20px;
-}
-section.about .container .text-section .about_text p 
-{
+section.about .container .text-section .about_text p {
   font-size: 24px;
   line-height: 36px;
   font-weight: 400;
   color: #808080;
   margin-bottom: 50px;
 }
-section.about .container .text-section .about_text a 
-{
+section.about .container .text-section .about_text a {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
-  padding: 15px 25px;
+  padding: 10px 25px;
   background-color: var(--main_color);
   color: var(--white_color);
   transition: 0.4s linear;
 }
-section.about .container .text-section .about_text a:hover 
-{
+section.about .container .text-section .about_text a:hover {
   background-color: var(--white_color);
   color: var(--bg-color);
 }
 
-section.about .container .text-section .opening-text h2
-{
+section.about .container .text-section .opening-text h2 {
   font-size: 30px;
   font-weight: 700;
   line-height: 33px;
   color: var(--white_color);
   margin-bottom: 50px;
 }
-section.about .container .text-section .opening-text ul li
-{
+section.about .container .text-section .opening-text ul li {
   display: flex;
   gap: 20px;
   font-size: 24px;
   line-height: 48px;
   font-weight: 700;
 }
-section.about .container .text-section .opening-text ul li h3
-{
-color: var(--main_color);
+section.about .container .text-section .opening-text ul li h3 {
+  color: var(--main_color);
 }
-section.about .container .text-section .opening-text ul li span
-{
-color: var(--white_color);
-text-transform: uppercase;
+section.about .container .text-section .opening-text ul li span {
+  color: var(--white_color);
+  text-transform: uppercase;
+}
+section.about .container .img_section {
+  width: 100%;
+}
+section.about .container .img_section img {
+  width: 90%;
 }
 /* End About Section */
+/* ================= Start Skills Section ================= */
+section.skills .container {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-image: url(../images/Rectangle-27-copy-2.jpg);
+}
+section.skills .text_side {
+  text-align: center;
+}
+section.skills .container .boxs {
+  display: flex;
+  gap: 40px;
+}
+section.skills .container .boxs .box {
+  color: var(--white_color);
+  border: 10px solid var(--white_color);
+  padding: 35px 25px;
+  text-align: center;
+}
+section.skills .container .boxs .box h1 {
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 700;
+  color: var(--main_color);
+  margin-bottom: 10px;
+}
+section.skills .container .boxs .box h3 {
+  font-size: 30px;
+  line-height: 33px;
+  font-weight: 700;
+  margin-bottom: 13px;
+
+}
+section.skills .container .boxs .box p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+/* End Skills Section */
