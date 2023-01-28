@@ -5,7 +5,7 @@
   --second_color: rgb(217, 204, 181);
   --bg-color: #171717;
   --white_color: rgb(255, 255, 255);
-  --main-padding: 200px;
+  --main-padding: 100px;
 }
 
 /* Main Components */
@@ -261,7 +261,7 @@ section.about .container {
   background-image: url(../images/map-1.png);
   background-repeat: no-repeat;
   background-position: center bottom;
-  padding-top: var(--main-padding);
+  padding-top: calc(var(--main-padding) * 2);
   padding-bottom: var(--main-padding);
   display: flex;
 }
@@ -322,9 +322,10 @@ section.about .container .img_section img {
 /* End About Section */
 /* ================= Start Skills Section ================= */
 section.skills .container {
-  padding-top: var(--main-padding);
-  padding-bottom: var(--main-padding);
   background-image: url(../images/Rectangle-27-copy-2.jpg);
+  background-position: center center;
+  padding-top: var(--main-padding);
+  padding-bottom: calc(var(--main-padding) / 2);
 }
 section.skills .text_side {
   text-align: center;
@@ -351,7 +352,6 @@ section.skills .container .boxs .box h3 {
   line-height: 33px;
   font-weight: 700;
   margin-bottom: 13px;
-
 }
 section.skills .container .boxs .box p {
   font-size: 16px;
@@ -359,3 +359,56 @@ section.skills .container .boxs .box p {
   line-height: 22px;
 }
 /* End Skills Section */
+/* ================= Start Menu Section ================= */
+section.menu {
+  background-image: url(../images/slide_main_coffee2.jpg);
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  text-align: center;
+}
+section.menu .container .row {
+  background-color: var(--main_color);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 100px;
+  margin: 0 auto;
+}
+section.menu .container .row .text_side span
+{
+color: var(--white_color);
+}
+section.menu .container .row .text_side h1 
+{
+  color: var(--bg-color);
+}
+section.menu .container .row ul.type
+{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+section.menu .container .row ul.type li 
+{
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 600;
+  transition: 0.4s;
+}
+section.menu .container .row ul.type li:hover
+{
+color: var(--white_color);
+}
+section.menu .container .row ul.menu_items {
+  max-height: 450px;
+  overflow-y: scroll;
+}
+section.menu .container .row ul.menu_items li h2
+{
+  display: inline-block;
+  font-size: 30px;
+  line-height: 33px;
+  font-weight: 700;
+  color: var(--bg-color);
+}
+
+/* End Menu Section */
