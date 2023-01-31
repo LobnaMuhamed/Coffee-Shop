@@ -381,6 +381,10 @@ section.menu .container .row .text_side h1
 {
   color: var(--bg-color);
 }
+section.menu .container .menu_table 
+{
+  background-color: red;
+}
 section.menu .container .row ul.type
 {
   display: flex;
@@ -401,6 +405,16 @@ color: var(--white_color);
 section.menu .container .row ul.menu_items {
   max-height: 450px;
   overflow-y: scroll;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+section.menu .container .row ul.menu_items li .details 
+{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
 }
 section.menu .container .row ul.menu_items li h2
 {
@@ -410,5 +424,32 @@ section.menu .container .row ul.menu_items li h2
   font-weight: 700;
   color: var(--bg-color);
 }
+section.menu .container .row ul.menu_items li span
+{
+  border-bottom: 2px dashed;
+  margin-bottom: 10px;
+}
+
+section.menu .container .row ul.menu_items li p
+{
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 300;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--white_color);
+}
+
 
 /* End Menu Section */
