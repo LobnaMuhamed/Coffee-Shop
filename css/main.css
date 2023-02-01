@@ -24,7 +24,28 @@ ul {
   list-style: none;
 }
 .container {
-  padding: 0 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/*  Medium  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 a {
   text-decoration: none;
@@ -43,7 +64,13 @@ a {
   font-weight: 700;
   color: var(--main_color);
 }
-h1 {
+h1,
+h2,
+h3,
+p,
+a,
+span,
+img {
   transition: var(--main-transition);
 }
 /* =========================== Start Home Section =========================== */
@@ -113,13 +140,11 @@ section.home nav {
   padding-top: 30px;
   display: flex;
   justify-content: space-between;
-  padding: 30px;
 }
 section.home nav .logo {
   cursor: pointer;
 }
 section.home nav .nav_side {
-  display: flex;
   transition: var(--main-transition);
 }
 section.home nav .nav_side .links ul {
@@ -175,6 +200,15 @@ section.home nav .bar_toggle i {
   section.home nav .nav_side .links {
     display: none;
   }
+  section.home nav .bar_toggle i {
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 320px) {
+  section.home nav .logo img {
+    width: 150px;
+  }
 }
 /* End NavBar */
 /* ================= Start Text Section ================= */
@@ -224,10 +258,28 @@ section.home > .container .text_side .btns a.about_btn {
   border: 2s solid var(--bg-color);
   padding: 15px 30px;
 }
-
-@media (max-width: 1600px) {
-  section.home .container {
-    padding: 0 40px;
+@media (max-width: 339px) {
+  section.home > .container .text_side h1 {
+    font-size: 45px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 340px) and (max-width: 768px) {
+  section.home > .container .text_side h1 {
+    font-size: 60px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 768px) {
+  section.home > .container .text_side {
+    gap: 5px;
+  }
+  section.home > .container .text_side .btns a.about_btn {
+    padding: 10px 13px;
+  }
+  section.home > .container .text_side .btns a.prod_btn {
+    padding: 7px 10px;
+    margin-right: 10px;
   }
 }
 @media (max-width: 991px) {
@@ -238,21 +290,10 @@ section.home > .container .text_side .btns a.about_btn {
     width: 100%;
   }
 }
-@media (max-width: 768px) {
+
+@media (min-width: 767px) and (max-width: 1200px) {
   section.home > .container .text_side h1 {
-    font-size: 60px !important;
-    line-height: 30px;
-  }
-}
-@media (max-width: 1200px) {
-  section.home nav .container .bar_toggle i {
-    display: inline-block;
-    margin-top: 10px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1200px) {
-  section.home > .container .text_side h1 {
-    font-size: 80px !important;
+    font-size: 80px;
   }
 }
 
@@ -279,25 +320,33 @@ section.about .container {
   background-image: url(../images/map-1.png);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
-  display: flex;
 }
-section.about .container .text-section {
-  display: flex;
+section.about .container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 40px;
 }
-section.about .container .text-section .about_text {
-  flex: 0 0 50%;
+
+@media (max-width: 1200px) {
+  section.about .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-section.about .container .text-section .about_text p {
+@media (max-width: 991px) {
+  section.about .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+section.about .container .about_text p {
   font-size: 24px;
   line-height: 36px;
   font-weight: 400;
   color: #808080;
   margin-bottom: 50px;
 }
-section.about .container .text-section .about_text a {
+section.about .container .about_text a {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
@@ -306,67 +355,66 @@ section.about .container .text-section .about_text a {
   color: var(--white_color);
   transition: 0.4s linear;
 }
-section.about .container .text-section .about_text a:hover {
+section.about .container .about_text a:hover {
   background-color: var(--white_color);
   color: var(--bg-color);
 }
 
-section.about .container .text-section .opening-text h2 {
+section.about .container .opening-text h2 {
   font-size: 30px;
   font-weight: 700;
   line-height: 33px;
   color: var(--white_color);
   margin-bottom: 50px;
 }
-section.about .container .text-section .opening-text ul li {
+section.about .container .opening-text ul li {
   display: flex;
-  gap: 20px;
   font-size: 24px;
   line-height: 48px;
   font-weight: 700;
 }
-section.about .container .text-section .opening-text ul li h3 {
+section.about .container .opening-text ul li h3 {
   color: var(--main_color);
 }
-section.about .container .text-section .opening-text ul li span {
+section.about .container .opening-text ul li span {
   color: var(--white_color);
   text-transform: uppercase;
 }
 section.about .container .img_section {
-   width: 100%;
+  width: 80%;
 }
 section.about .container .img_section img {
- width: 300px;
+  width: 380px;
 }
-@media (max-width:991px) {
-    section.about .container .text-section
-  {
-    flex-direction: column;
+@media (max-width: 991px) {
+  section.about .container {
     gap: 60px;
   }
-    section.about .container .img_section
-{
-  display: none;
+  section.about .container .img_section {
+    display: none;
+  }
+  section.about .container .text_side h1 {
+    font-size: 50px;
+  }
+  section.about .container .about_text p {
+    font-size: 20px;
+  }
+  section.about .container .break {
+    display: none;
+  }
 }
-section.about .container .text-section .text_side h1 
-{
-  font-size: 50px;
-}
-}
-@media (max-width:1200px) {
-  section.about .container 
-  {
+@media (max-width: 1200px) {
+  section.about .container {
     flex-direction: column;
     gap: 40px;
   }
-  section.about .container .img_section
-  {
+  section.about .container .img_section {
     text-align: center;
   }
 }
 /* End About Section */
 /* ================= Start Skills Section ================= */
-section.skills .container {
+section.skills {
   background-image: url(../images/Rectangle-27-copy-2.jpg);
   background-position: center center;
   padding-top: var(--main-padding);
@@ -376,7 +424,8 @@ section.skills .text_side {
   text-align: center;
 }
 section.skills .container .boxs {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
 section.skills .container .boxs .box {
@@ -403,6 +452,31 @@ section.skills .container .boxs .box p {
   font-weight: 300;
   line-height: 22px;
 }
+@media (max-width: 481px) {
+  section.skills .container .boxs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.skills .container .boxs .box {
+  padding: 15px;
+  }
+  section.skills .container .boxs .box h1 
+  {
+    font-size: 55px;
+  }
+}
+@media (max-width: 768px) {
+  section.skills .container .boxs {
+    gap: 20px;
+  }
+}
+@media (max-width: 992px) {
+  section.skills .container .boxs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
 /* End Skills Section */
 /* ================= Start Menu Section ================= */
 section.menu {
