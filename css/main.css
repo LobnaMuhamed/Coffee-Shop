@@ -47,6 +47,11 @@ ul {
     width: 1170px;
   }
 }
+@media (max-width: 767px) {
+  .container {
+    margin: 0;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -72,6 +77,19 @@ a,
 span,
 img {
   transition: var(--main-transition);
+}
+a.btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--white_color);
+  margin-top: 30px;
+  transition: 0.2s linear;
+}
+a.btn:hover {
+  background-color: var(--white_color);
+  border: 2px solid black;
+  color: black;
 }
 /* =========================== Start Home Section =========================== */
 section.home {
@@ -234,19 +252,6 @@ section.home > .container .text_side p {
   font-weight: 400;
   padding-bottom: 40px;
 }
-section.home > .container .text_side .btns a {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 30px;
-  color: var(--white_color);
-  margin-top: 30px;
-  transition: 0.2s linear;
-}
-section.home > .container .text_side .btns a.btn:hover {
-  background-color: var(--white_color);
-  border: 2px solid black;
-  color: black;
-}
 section.home > .container .text_side .btns a.prod_btn {
   background-color: var(--main_color);
   margin-right: 25px;
@@ -258,28 +263,9 @@ section.home > .container .text_side .btns a.about_btn {
   border: 2s solid var(--bg-color);
   padding: 15px 30px;
 }
-@media (max-width: 339px) {
+@media (max-width: 1200px) {
   section.home > .container .text_side h1 {
-    font-size: 45px;
-    line-height: 25px;
-  }
-}
-@media (min-width: 340px) and (max-width: 768px) {
-  section.home > .container .text_side h1 {
-    font-size: 60px;
-    line-height: 30px;
-  }
-}
-@media (max-width: 768px) {
-  section.home > .container .text_side {
-    gap: 5px;
-  }
-  section.home > .container .text_side .btns a.about_btn {
-    padding: 10px 13px;
-  }
-  section.home > .container .text_side .btns a.prod_btn {
-    padding: 7px 10px;
-    margin-right: 10px;
+    font-size: 80px;
   }
 }
 @media (max-width: 991px) {
@@ -290,10 +276,26 @@ section.home > .container .text_side .btns a.about_btn {
     width: 100%;
   }
 }
-
-@media (min-width: 767px) and (max-width: 1200px) {
+@media (max-width: 768px) {
+  section.home > .container .text_side {
+    gap: 5px;
+  }
   section.home > .container .text_side h1 {
-    font-size: 80px;
+    font-size: 60px;
+    line-height: 30px;
+  }
+  section.home > .container .text_side .btns a.about_btn {
+    padding: 10px 13px;
+  }
+  section.home > .container .text_side .btns a.prod_btn {
+    padding: 7px 10px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 339px) {
+  section.home > .container .text_side h1 {
+    font-size: 45px;
+    line-height: 25px;
   }
 }
 
@@ -483,6 +485,7 @@ section.menu {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
   text-align: center;
+  display: none;
 }
 section.menu .container .row {
   background-color: var(--main_color);
@@ -564,6 +567,7 @@ section.testimonail {
   background-image: url(../images/coffee_parallax.jpg);
   background-position: center center;
   background-attachment: fixed;
+  display: none;
 }
 section.testimonail .container {
   position: relative;
@@ -613,9 +617,58 @@ section.testimonail .swiper-slide span.fa {
 
 section.testimonail .container .swiper_btn::after {
   background-color: var(--main_color);
-  color:black;
+  color: black;
   font-size: 16px;
   font-weight: 700;
   padding: 20px;
 }
 /* End Testimonail Section */
+
+/* ================= Start Icons Section ================= */
+
+section.icons {
+  padding-top: calc(var(--main-padding) / 2);
+  padding-bottom: calc(var(--main-padding) / 2);
+}
+section.icons .container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+section.icons .container img {
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  section.icons .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  section.icons .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 481px) {
+  section.icons .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* End Icons  */
+
+/* ================= Start Offer Section ================= */
+section.offer {
+}
+section.offer .container {
+  padding: 0;
+  background-color: #242424;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+section.offer .container .img_offer img
+{
+  width: 100%;
+}
+/* End Offer Section */
