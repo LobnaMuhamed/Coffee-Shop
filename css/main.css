@@ -452,23 +452,7 @@ section.skills .container .boxs .box p {
   font-weight: 300;
   line-height: 22px;
 }
-@media (max-width: 481px) {
-  section.skills .container .boxs {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  section.skills .container .boxs .box {
-  padding: 15px;
-  }
-  section.skills .container .boxs .box h1 
-  {
-    font-size: 55px;
-  }
-}
-@media (max-width: 768px) {
-  section.skills .container .boxs {
-    gap: 20px;
-  }
-}
+
 @media (max-width: 992px) {
   section.skills .container .boxs {
     display: grid;
@@ -476,7 +460,22 @@ section.skills .container .boxs .box p {
     gap: 40px;
   }
 }
-
+@media (max-width: 768px) {
+  section.skills .container .boxs {
+    gap: 20px;
+  }
+}
+@media (max-width: 481px) {
+  section.skills .container .boxs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.skills .container .boxs .box {
+    padding: 15px;
+  }
+  section.skills .container .boxs .box h1 {
+    font-size: 55px;
+  }
+}
 /* End Skills Section */
 /* ================= Start Menu Section ================= */
 section.menu {
@@ -559,3 +558,64 @@ section.menu .container ::-webkit-scrollbar-thumb {
 }
 
 /* End Menu Section */
+
+/* ================= Start Testimonail Section ================= */
+section.testimonail {
+  background-image: url(../images/coffee_parallax.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+}
+section.testimonail .container {
+  position: relative;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  text-align: center;
+}
+section.testimonail .swiper {
+  width: 80%;
+  height: 100%;
+  color: var(--white_color);
+}
+
+section.testimonail .swiper-slide {
+  border: 10px solid var(--main_color);
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+section.testimonail .slide_container {
+  margin: 0 auto;
+  max-width: 70%;
+}
+section.testimonail .swiper-slide h3 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+}
+section.testimonail .swiper-slide span {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 700;
+}
+section.testimonail .swiper-slide p {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+section.testimonail .swiper-slide span.fa {
+  padding: 40px;
+  font-size: 60px;
+  zoom: 1.4;
+}
+
+section.testimonail .container .swiper_btn::after {
+  background-color: var(--main_color);
+  color:black;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 20px;
+}
+/* End Testimonail Section */
