@@ -747,7 +747,7 @@ section.blog .container .text_side:before
   content: "Blog";
   position: absolute;
   color: var(--white_color);
-  opacity: 0.09;
+  opacity: 0.05;
   left: 50%;
   transform: translateX( -50%);
   font-size: 100px;
@@ -801,5 +801,6 @@ section.blog .container .blogs .box p
   line-height: 28px;
   font-weight: 300;
   color: var(--white_color);
+  lkk
 }
 /* End Blog Section */
