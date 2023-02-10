@@ -731,22 +731,75 @@ section.offer .container .text_offer .text_side span {
 /* End Offer Section */
 
 /* ================= Start Blog Section ================= */
+section.blog .container
+{
+  padding-top: var(--main-padding);
+}
 section.blog .container .text_side
 {
   position: relative;
+  text-align: center;
+  padding-bottom: var(--main-padding);
+
 }
 section.blog .container .text_side:before 
 {
   content: "Blog";
   position: absolute;
   color: var(--white_color);
-  opacity: 0.5;
-  font-size: 60px;
+  opacity: 0.09;
+  left: 50%;
+  transform: translateX( -50%);
+  font-size: 100px;
   line-height: 66px;
   z-index: -1;
-  font-weight: 700;
-  zoom:1;
+  font-weight: 800;
+  zoom:1.9;
   top: 0;
-
+}
+section.blog .container .blogs
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+section.blog .container .blogs .box 
+{
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+section.blog .container .blogs .box:hover .img_box img 
+{
+  transform: scale(1.1);
+}
+section.blog .container .blogs .box .img_box
+{
+  overflow: hidden;
+}
+section.blog .container .blogs .box .img_box img 
+{
+  transition: var(--main-transition) linear;
+  width: 100%;
+}
+section.blog .container .blogs .box h2 
+{
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  color: var(--main_color);
+}
+section.blog .container .blogs .box > h2:hover 
+{
+  color: #242424;
+}
+section.blog .container .blogs .box p 
+{
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  color: var(--white_color);
 }
 /* End Blog Section */
