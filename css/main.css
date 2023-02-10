@@ -731,8 +731,22 @@ section.offer .container .text_offer .text_side span {
 /* End Offer Section */
 
 /* ================= Start Blog Section ================= */
-section.blog .container .text_side 
+section.blog .container .text_side
 {
-  background-image: url(../images/);
+  position: relative;
+}
+section.blog .container .text_side:before 
+{
+  content: "Blog";
+  position: absolute;
+  color: var(--white_color);
+  opacity: 0.5;
+  font-size: 60px;
+  line-height: 66px;
+  z-index: -1;
+  font-weight: 700;
+  zoom:1;
+  top: 0;
+
 }
 /* End Blog Section */
