@@ -37,7 +37,7 @@ ul {
   }
 }
 /*  Medium  */
-@media (min-width: 992px) {
+@media (min-width: 991px) {
   .container {
     width: 970px;
   }
@@ -51,6 +51,11 @@ ul {
 @media (max-width: 767px) {
   .container {
     margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
   }
 }
 a {
@@ -486,7 +491,6 @@ section.menu {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
   text-align: center;
-  display: none;
 }
 section.menu .container .row {
   background-color: var(--main_color);
@@ -662,7 +666,7 @@ section.icons .container img {
 /* ================= Start Offer Section ================= */
 section.offer .container {
   padding: 0;
- position: relative;
+  position: relative;
   background-color: #242424;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -675,15 +679,13 @@ section.offer .container .text_offer {
 section.offer .container .text_offer .text_side {
   padding-bottom: 30px;
 }
-section.offer .container .text_offer .text_side span 
-{
+section.offer .container .text_offer .text_side span {
   color: var(--white_color);
 }
 section.offer .container .text_offer .text_side h1 {
   color: var(--main_color);
 }
-section.offer .container .text_offer p 
-{
+section.offer .container .text_offer p {
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
@@ -691,8 +693,7 @@ section.offer .container .text_offer p
   width: 60%;
   margin: 40px auto;
 }
-section.offer .container .text_offer a.btn 
-{
+section.offer .container .text_offer a.btn {
   background-color: var(--main_color);
   padding: 10px 50px;
 }
@@ -700,107 +701,244 @@ section.offer .container .text_offer a.btn:hover {
   background-color: var(--white_color);
   border: 2px solid black;
 }
-section.offer .container .img_offer img
-{
+section.offer .container .img_offer img {
   width: 100%;
   height: 100%;
 }
-@media (max-width:1200px) {
-  section.offer .container .img_offer
-  {
+@media (max-width: 1200px) {
+  section.offer .container .img_offer {
     display: none;
   }
-  section.offer .container
-  {
+  section.offer .container {
     grid-template-columns: repeat(1, 1fr);
   }
-section.offer .container .text_offer p {
-width: 80%;
+  section.offer .container .text_offer p {
+    width: 80%;
+  }
 }
-}
-@media (max-width:768px) {
-section.offer .container .text_offer .text_side h1 {
-  font-size: 36px;
-  line-height: 40px;
-}
-section.offer .container .text_offer .text_side span {
-  font-size: 20px;
-  line-height: 22px;
-}
+@media (max-width: 768px) {
+  section.offer .container .text_offer .text_side h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  section.offer .container .text_offer .text_side span {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 /* End Offer Section */
 
 /* ================= Start Blog Section ================= */
-section.blog .container
-{
+section.blog .container {
   padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  text-align: center;
 }
-section.blog .container .text_side
-{
+section.blog .container .text_side {
   position: relative;
   text-align: center;
   padding-bottom: var(--main-padding);
-
 }
-section.blog .container .text_side:before 
-{
+section.blog .container .text_side:before {
   content: "Blog";
   position: absolute;
   color: var(--white_color);
   opacity: 0.05;
   left: 50%;
-  transform: translateX( -50%);
+  transform: translateX(-50%);
   font-size: 100px;
   line-height: 66px;
   z-index: -1;
   font-weight: 800;
-  zoom:1.9;
+  zoom: 1.9;
   top: 0;
 }
-section.blog .container .blogs
-{
+section.blog .container .blogs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  padding-bottom: 20px;
 }
-section.blog .container .blogs .box 
-{
+section.blog .container .blogs .box {
   cursor: pointer;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-bottom: 20px;
 }
-section.blog .container .blogs .box:hover .img_box img 
-{
+section.blog .container .blogs .box:hover .img_box img {
   transform: scale(1.1);
 }
-section.blog .container .blogs .box .img_box
-{
+section.blog .container .blogs .box .img_box {
   overflow: hidden;
 }
-section.blog .container .blogs .box .img_box img 
-{
+section.blog .container .blogs .box .img_box img {
   transition: var(--main-transition) linear;
   width: 100%;
 }
-section.blog .container .blogs .box h2 
-{
+section.blog .container .blogs .box h2 {
   font-size: 36px;
   line-height: 40px;
   font-weight: 700;
   color: var(--main_color);
 }
-section.blog .container .blogs .box > h2:hover 
-{
+section.blog .container .blogs .box > h2:hover {
   color: #242424;
 }
-section.blog .container .blogs .box p 
-{
+section.blog .container .blogs .box p {
   font-size: 18px;
   line-height: 28px;
   font-weight: 300;
   color: var(--white_color);
+}
+section.blog .container .blogs .data_box {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: #242424;
+  padding: 20px 30px;
+}
+section.blog .container .blogs .data_box h3 {
+  font-size: 48px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--main_color);
+}
+section.blog .container .blogs .data_box h3:hover {
+  color: var(--white_color);
+}
+section.blog .container .blogs .data_box .left_side {
+  display: flex;
+  gap: 10px;
+}
+section.blog .container .blogs .data_box .left_side span {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 300;
+  text-align: left;
+}
+section.blog .container .blogs .data_box .right_side {
+  display: flex;
+  gap: 10px;
+}
+section.blog .container .blogs .data_box .right_side span {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 28px;
+}
+section.blog .container .btn_blog {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--main_color);
+  border: 2px var(--main_color) solid;
+  padding: 6px 40px;
+}
+section.blog .container .btn_blog:hover {
+  color: #242424;
+  border: #242424;
+}
+@media (max-width: 992px) {
+  section.blog .container .blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.blog .container .blogs .box:last-child {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  section.blog .container .text_side:before {
+    zoom: 1.3;
+  }
+  section.blog .container .blogs {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: left;
+    gap: 30px;
+  }
+  section.blog .container .blogs .box {
+    gap: 20px;
+  }
+  section.blog .container .blogs .box:last-child {
+    display: inherit;
+  }
+  section.blog .container .blogs .box h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  section.blog .container .blogs .box p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+  }
+}
+@media (max-width: 320px) {
+  section.blog .container .text_side:before {
+    zoom: 1;
+  }
+}
+
+/* End Blog Section */
+/* ================= Start Subscribe Section ================= */
+section.subscribe
+{
+  display: none;
+}
+section.subscribe .container {
+  display: flex;
+  background-color: var(--main_color);
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+section.subscribe .container .text-side {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+}
+section.subscribe .container .text-side span {
+  color: var(--white_color);
+}
+section.subscribe .container .text_side h3 {
+  color: var(--bg-color);
+}
+section.subscribe .container .input_side {
+  position: relative;
+}
+section.subscribe .container .input_side label {
+  position: absolute;
+  font-size: 20px;
+  line-height: 46px;
+  color: var(--white_color);
+  background-color: var(--bg-color);
+  height: 100%;
+  padding: 5 20px;
+  right: -50px;
+}
+section.subscribe .container .input_side input {
+  padding: 10px 120px 10px 10px;
+  font-size: 18px;
+  line-height: 34px;
+  color: rgba(36, 36, 36, 0.6);
+  border: none;
+  outline: none;
+}
+section.subscribe .container .social_media ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+section.subscribe .social_media ul li a {
+  color: var(--bg-color);
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 16px;
+  font-size: 18px;
+}
+/* End Subscribe Section */
+/* ================= Start Footer Section ================= */
+section.footer 
+{
 
 }
-/* End Blog Section */
+
+/* End Footer Section */
