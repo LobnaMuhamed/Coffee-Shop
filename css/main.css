@@ -90,13 +90,9 @@ a.btn {
   line-height: 30px;
   color: var(--white_color);
   margin-top: 30px;
-  transition: 0.2s linear;
+  transition: 0.2s linear all;
 }
-a.btn:hover {
-  background-color: var(--white_color);
-  border: 2px solid black;
-  color: black;
-}
+
 /* =========================== Start Home Section =========================== */
 section.home {
   position: relative;
@@ -266,8 +262,13 @@ section.home > .container .text_side .btns a.prod_btn {
 }
 section.home > .container .text_side .btns a.about_btn {
   background-color: var(--bg-color);
-  border: 2s solid var(--bg-color);
+  border: 2px solid var(--bg-color);
   padding: 15px 30px;
+}
+section.home > .container .text_side .btns a.btn:hover {
+  background-color: var(--white_color);
+  border: 2px solid var(--bg-color);
+  color: var(--bg-color);
 }
 @media (max-width: 1200px) {
   section.home > .container .text_side h1 {
@@ -336,7 +337,6 @@ section.about .container {
   grid-template-columns: repeat(3, auto);
   gap: 40px;
 }
-
 @media (max-width: 1200px) {
   section.about .container {
     grid-template-columns: repeat(2, 1fr);
@@ -360,14 +360,15 @@ section.about .container .about_text a {
   font-weight: 600;
   padding: 10px 25px;
   background-color: var(--main_color);
+  border: 2px solid var(--main_color);
   color: var(--white_color);
   transition: 0.4s linear;
 }
 section.about .container .about_text a:hover {
   background-color: var(--white_color);
+  border: 2px solid var(--bg-color);
   color: var(--bg-color);
 }
-
 section.about .container .opening-text h2 {
   font-size: 30px;
   font-weight: 700;
@@ -754,6 +755,7 @@ section.offer .container .text_offer a.btn {
 section.offer .container .text_offer a.btn:hover {
   background-color: var(--white_color);
   border: 2px solid black;
+  color: var(--bg-color);
 }
 section.offer .container .img_offer img {
   width: 100%;
@@ -890,8 +892,9 @@ section.blog .container .btn_blog {
   padding: 6px 40px;
 }
 section.blog .container .btn_blog:hover {
-  color: #242424;
-  border: #242424;
+  background-color: var(--white_color);
+  border: 2px solid var(--bg-color);
+  color: var(--bg-color);
 }
 @media (max-width: 992px) {
   section.blog .container .blogs {
@@ -1045,10 +1048,16 @@ section.footer .container .coffee_side p {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 30px;
 }
-section.footer .container .coffee_side a {
+section.footer .container .coffee_side a.btn {
   color: #171717;
   background-color: var(--main_color);
+  border: 2px solid var(--main_color);
   padding: 8px 22px;
+}
+section.footer .container .coffee_side a.btn:hover {
+  background-color: var(--white_color);
+  border: 2px solid var(--bg-color);
+  color: var(--bg-color);
 }
 section.footer .container h3 {
   font-size: 30px;
@@ -1086,9 +1095,8 @@ section.footer .contact .info_site ul li p {
 section.footer .contact .info_site ul li p.link {
   color: var(--white_color);
 }
-@media (max-width:1200px) {
-  section.footer .container 
-  {
+@media (max-width: 1200px) {
+  section.footer .container {
     gap: 20px;
   }
 }
@@ -1100,7 +1108,7 @@ section.footer .contact .info_site ul li p.link {
     display: none;
   }
 }
-@media (max-width:768px) {
+@media (max-width: 768px) {
   section.footer .container {
     padding-left: 0;
     grid-template-columns: repeat(1, 1fr);
